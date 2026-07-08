@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Your Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Background canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Side nav -->
+<nav id="sidenav" aria-label="Section navigation">
+  <div class="ndot active" data-target="hero">
+    <span class="ndot-label">Home</span>
+    <div class="ndot-circle"></div>
+  </div>
+  <div class="ndot" data-target="about">
+    <span class="ndot-label">About</span>
+    <div class="ndot-circle"></div>
+  </div>
+  <div class="ndot" data-target="education">
+    <span class="ndot-label">Education</span>
+    <div class="ndot-circle"></div>
+  </div>
+  <div class="ndot" data-target="projects">
+    <span class="ndot-label">Projects</span>
+    <div class="ndot-circle"></div>
+  </div>
+  <div class="ndot" data-target="skills">
+    <span class="ndot-label">Skills</span>
+    <div class="ndot-circle"></div>
+  </div>
+  <div class="ndot" data-target="contact">
+    <span class="ndot-label">Contact</span>
+    <div class="ndot-circle"></div>
+  </div>
+</nav>
+
+
+<!-- ─── HERO ───────────────────────────── -->
+<section id="hero">
+  <div class="hero-eyebrow">
+    <span class="status-dot"></span>
+    Seeking Internship &nbsp;·&nbsp; <span id="clock"></span>
+  </div>
+
+  <h1 class="hero-name" id="scramble-name">YOUR NAME</h1>
+  <p class="hero-title">[ Your Course ] &nbsp;·&nbsp; [ Your University ]</p>
+
+  <div class="hero-cta">
+    <a href="#projects" class="btn"><span>View Projects</span></a>
+    <a href="#contact" class="btn btn-ghost"><span>Hire Me</span></a>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span class="scroll-hint-label">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+
+<!-- ─── ABOUT ──────────────────────────── -->
+<section id="about">
+
+  <!-- Photo -->
+  <div class="about-photo-wrap reveal">
+    <div class="photo-frame">
+      <!--
+        TO ADD YOUR PHOTO:
+        Replace the div below with:
+        <img src="your-photo.jpg" alt="Your Name">
+      -->
+      <div class="photo-placeholder">
+        <div class="photo-placeholder-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        <span class="photo-placeholder-text">Your Photo</span>
+      </div>
+      <div class="photo-scanlines"></div>
+      <div class="photo-border"></div>
+    </div>
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+  </div>
+
+  <!-- Text -->
+  <div class="about-text reveal">
+    <p class="section-label">// about me</p>
+    <h2 class="section-title">Eager to learn.<br>Ready to build.</h2>
+    <p class="about-bio">
+      [Your bio here. Be honest and confident — say what you're studying,
+      what you love building, and what kind of work excites you.
+      You don't need experience to have a point of view. Two to three sentences is perfect.]
+    </p>
+    <div class="stats-grid">
+      <div>
+        <div class="stat-num">0+</div>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div>
+        <div class="stat-num">0+</div>
+        <div class="stat-label">Technologies</div>
+      </div>
+      <div>
+        <div class="stat-num stat-text">[ N ]th</div>
+        <div class="stat-label">Year Student</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+
+<!-- ─── EDUCATION ──────────────────────── -->
+<section id="education">
+  <div class="edu-layout reveal">
+
+    <div class="edu-left">
+      <p class="section-label">// education</p>
+      <h2 class="section-title">Where I'm<br>coming from.</h2>
+      <p class="about-bio">
+        My academic background shapes how I think about problems —
+        not just how to solve them, but why they matter.
+      </p>
+    </div>
+
+    <div class="edu-right">
+
+      <div class="edu-card reveal" data-delay="0">
+        <div class="edu-card-top">
+          <div>
+            <div class="edu-degree">[ Your Degree / Course ]</div>
+            <div class="edu-school">[ Your University ]</div>
+          </div>
+          <div class="edu-year">[ Year Started ] – Present</div>
+        </div>
+        <div class="edu-courses">
+          <span class="edu-course-label">Relevant Coursework</span>
+          <div class="project-tags" style="margin-top:.6rem; margin-bottom:0;">
+            <span class="tag">Data Structures</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">Web Development</span>
+            <span class="tag">Database Systems</span>
+            <span class="tag">[ Add Course ]</span>
+            <span class="tag">[ Add Course ]</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card reveal" data-delay="120">
+        <div class="edu-card-top">
+          <div>
+            <div class="edu-degree">[ Senior High School / Track ]</div>
+            <div class="edu-school">[ Your School ]</div>
+          </div>
+          <div class="edu-year">[ Year ] – [ Year ]</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+
+<!-- ─── PROJECTS ────────────────────────── -->
+<section id="projects">
+  <div class="reveal">
+    <p class="section-label">// academic & personal work</p>
+    <h2 class="section-title">Projects</h2>
+  </div>
+
+  <div class="projects-grid">
+
+    <article class="project-card reveal" data-delay="0">
+      <div class="card-glow"></div>
+      <div class="project-badge">School Project</div>
+      <div class="project-num">01</div>
+      <h3 class="project-title">Project Name</h3>
+      <p class="project-desc">
+        What does this project do? What problem does it solve?
+        Keep it specific — even a school project shows real skills.
+      </p>
+      <div class="project-tags">
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">MongoDB</span>
+      </div>
+      <a href="#" class="project-link">View on GitHub <span class="arrow">→</span></a>
+    </article>
+
+    <article class="project-card reveal" data-delay="100">
+      <div class="card-glow"></div>
+      <div class="project-badge">Personal Project</div>
+      <div class="project-num">02</div>
+      <h3 class="project-title">Project Name</h3>
+      <p class="project-desc">
+        What does this project do? What problem does it solve?
+        Keep it specific — even a school project shows real skills.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Vue.js</span>
+        <span class="tag">Python</span>
+        <span class="tag">Firebase</span>
+      </div>
+      <a href="#" class="project-link">View on GitHub <span class="arrow">→</span></a>
+    </article>
+
+    <article class="project-card reveal" data-delay="200">
+      <div class="card-glow"></div>
+      <div class="project-badge">School Project</div>
+      <div class="project-num">03</div>
+      <h3 class="project-title">Project Name</h3>
+      <p class="project-desc">
+        What does this project do? What problem does it solve?
+        Keep it specific — even a school project shows real skills.
+      </p>
+      <div class="project-tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+      <a href="#" class="project-link">View on GitHub <span class="arrow">→</span></a>
+    </article>
+
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+
+<!-- ─── SKILLS ──────────────────────────── -->
+<section id="skills">
+  <div class="reveal">
+    <p class="section-label">// what I work with</p>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-cloud">
+      <div class="skill-pill"><span>HTML / CSS</span></div>
+      <div class="skill-pill"><span>JavaScript</span></div>
+      <div class="skill-pill"><span>React</span></div>
+      <div class="skill-pill"><span>Node.js</span></div>
+      <div class="skill-pill"><span>Python</span></div>
+      <div class="skill-pill"><span>Java</span></div>
+      <div class="skill-pill"><span>Git & GitHub</span></div>
+      <div class="skill-pill"><span>Figma</span></div>
+      <div class="skill-pill"><span>SQL</span></div>
+      <div class="skill-pill"><span>[ Your Skill ]</span></div>
+      <div class="skill-pill"><span>[ Your Skill ]</span></div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+</section>
+
+
+<!-- ─── CONTACT ─────────────────────────── -->
+<section id="contact">
+  <div class="reveal">
+    <p class="section-label">// open to opportunities</p>
+    <h2 class="section-title">Looking for an intern<br>who's hungry to grow?</h2>
+    <a href="mailto:your@email.com" class="contact-big">your@email.com</a>
+    <div class="social-row">
+      <a href="#" class="social-link">GitHub</a>
+      <a href="#" class="social-link">LinkedIn</a>
+      <a href="#" class="social-link">Resume ↗</a>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <span id="footer-year"></span> &nbsp;·&nbsp; Built by <span id="footer-name">Your Name</span> &nbsp;·&nbsp; Student · Aspiring Developer
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
