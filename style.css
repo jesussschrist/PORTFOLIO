@@ -100,12 +100,13 @@ body {
 section {
   position: relative;
   z-index: 1;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6rem 10vw;
+  padding: 7rem 10vw;
 }
+
 @media (max-width: 768px) {
   section { padding: 5rem 6vw; }
   #sidenav { display: none; }
@@ -115,6 +116,7 @@ section {
 
 /* ── Hero ───────────────────────────── */
 #hero {
+  min-height: 100vh;
   flex-direction: column;
   text-align: center;
   padding-top: 0;
