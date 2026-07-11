@@ -114,7 +114,7 @@ const RADIUS  = 220;
 /* ─── Text scramble (hero name) ─────── */
 const CHARS  = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&';
 const nameEl = document.getElementById('scramble-name');
-const FINAL  = 'YOUR NAME'; /* ← replace with your actual name */
+const FINAL  = 'JHON CARL GABARDA'; /* ← replace with your actual name */
 let frame = 0;
 
 (function scramble() {
